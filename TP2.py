@@ -1,13 +1,6 @@
 
 from pila import Pila
 
-#2. Se recuperaron las bitácoras de las naves del cazarrecompensas Boba Fett y Din Djarin (The
-#Mandalorian), las cuales se almacenaban en una pila (en su correspondiente nave) en cada
-#misión de caza que emprendió, con la siguiente información: planeta visitado, a quien capturó,
-#costo de la recompensa. Resolver las siguientes actividades:
-#a. mostrar los planetas visitados en el orden que hicieron las misiones cada unofrom pila import Pila
-
-
 #14-INGRESAR ELEMENTOS EN UNA PILA
     #OREDENADOS DE FORMA CRECIENTE
     #CREAR PILA AUX-SIN METODOS DE ORDENAMIENTO
