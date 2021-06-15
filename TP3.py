@@ -78,43 +78,41 @@ while (not cola_personaje.cola_vacia()):
 
 #12. Dada dos colas con valores ordenadas, realizar un algoritmo que permita combinarlas en una
 #nueva cola. Se deben mantener ordenados los valores sin utilizar ninguna estructura auxiliar,
-#ni métodos de ordenamiento.
-
 cola_uno = Cola()
 cola_dos = Cola()
 cola_valores_ordenados = Cola()
-caux = Cola()
-
-
-datos1= [7,15,26,41,85,94]
-datos2= [4,21,24,36,54,89]
 
 
 
-cola_uno.arribo(datos1)
-cola_dos.arribo(datos2)
+ datos1= [7,15,26,41,85,94]
+ datos2= [4,21,24,36,54,89]
 
+for elemento in datos1:
+     cola_uno.arribo(elemento)
+for elemento in datos2:
+
+     cola_dos.arribo(elemento)
 
 
 while(not cola_uno.cola_vacia()):
     datos_cola1= cola_uno.atencion()
     while(not cola_dos.cola_vacia()):
-        datos_cola2=cola_dos.atencion()
-        if(datos_cola1 < datos_cola2):
-            cola_valores_ordenados.arribo(datos_cola1)
-        caux.arribo(datos_cola2)
-    while (not caux.cola_vacia()):
-        cola_dos.arribo(caux.atencion())
-        cola_valores_ordenados.arribo(cola_dos.atencion())
-        
+        if(datos_cola1 >= cola_dos.en_frente()):
+             datos_cola2= cola_dos.atencion()
+            cola_valores_ordenados.arribo(datos_cola2)
+        else:
+            break
+    cola_valores_ordenados.arribo(datos_cola1)
+
+    
 
 
-cantidad_elementos=0
-while(cantidad_elementos < cola_valores_ordenados.tamanio()):
+ cantidad_elementos=0
+ while(cantidad_elementos < cola_valores_ordenados.tamanio()):
     datos = cola_valores_ordenados.mover_final()
 
     print(datos)
-    cantidad_elementos+=1 
+     cantidad_elementos+=1 
 
 
 
